@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.root {
+  width: 75%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add {
+  float: left;
+  width: 20%;
+}
+.data {
+  float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.remove {
+  float: right;
+}
+
+.old {
+  margin: 1%;
+  width: 20%;
+  height: 30px;
+  background-color: greenyellow;
+  position: relative;
+}
+
+.new {
+  margin: 1%;
+  width: 20%;
+  height: 30px;
+  background-color: greenyellow;
+  position: relative;
+  animation-name: addFrame;
+  animation-duration: 1s;
+}
+
+.discard {
+  margin: 1%;
+  width: 20%;
+  height: 30px;
+  background-color: greenyellow;
+  position: relative;
+  animation-name: removeFrame;
+  animation-duration: 1s;
+}
+
+@keyframes addFrame {
+  0% {
+    background-color: yellow;
+    left: 200px;
+  }
+  100% {
+    background-color: green;
+    left: 0px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes removeFrame {
+  0% {
+    background-color: yellow;
+    left: 0px;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-color: red;
+    left: 200px;
   }
 }
