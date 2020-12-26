@@ -1,11 +1,17 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import Compartment from './Compartment';
 import Adder from './Adder';
 import './App.css';
 
-function App() {
+function App({ initialArray, getArray }) {
   const [array, setArray] = useState([]);
   const [added, setAdded] = useState(-1);
+  useEffect(() => {
+    return getArray(array);
+  });
+  useEffect(() => {
+    initialArray ? setArray(initialArray) : setArray([]);
+  }, [initialArray]);
   const remove = useCallback(
     (index) => {
       const a = array;

@@ -4,7 +4,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App initialArray={['Yash']} getArray={(array) => console.log(array)} />
   </React.StrictMode>,
   document.getElementById('root')
 );
