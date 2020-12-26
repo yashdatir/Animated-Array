@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Array from './Array';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App initialArray={['Yash']} getArray={(array) => console.log(array)} />
+    <Array initialArray={['Yash']} getArray={(array) => console.log(array)} />
   </React.StrictMode>,
   document.getElementById('root')
 );

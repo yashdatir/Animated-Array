@@ -3,7 +3,7 @@ import Compartment from './Compartment';
 import Adder from './Adder';
 import './App.css';
 
-function App({ initialArray, getArray }) {
+export default function Array({ initialArray, getArray }) {
   const [array, setArray] = useState([]);
   const [added, setAdded] = useState(-1);
   useEffect(() => {
@@ -54,5 +54,3 @@ function App({ initialArray, getArray }) {
     </div>
   );
 }
-
-export default App;
