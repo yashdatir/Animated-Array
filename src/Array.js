@@ -7,7 +7,7 @@ export default function Array({ initialArray, getArray }) {
   const [array, setArray] = useState([]);
   const [added, setAdded] = useState(-1);
   useEffect(() => {
-    return getArray(array);
+    return getArray ? getArray(array) : null;
   });
   useEffect(() => {
     initialArray ? setArray(initialArray) : setArray([]);
