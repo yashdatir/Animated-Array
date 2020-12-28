@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Array from './Array';
+import Array from 'animated-array';
 
 ReactDOM.render(
   <React.StrictMode>

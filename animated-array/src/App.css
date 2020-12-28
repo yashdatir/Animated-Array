@@ -1,0 +1,65 @@
+.root {
+  width: 75%;
+}
+
+.add {
+  float: left;
+  width: 20%;
+}
+.data {
+  float: left;
+}
+
+.remove {
+  float: right;
+}
+
+.old {
+  margin: 1%;
+  width: 20%;
+  height: 30px;
+  background-color: greenyellow;
+  position: relative;
+}
+
+.new {
+  margin: 1%;
+  width: 20%;
+  height: 30px;
+  background-color: greenyellow;
+  position: relative;
+  animation-name: addFrame;
+  animation-duration: 1s;
+}
+
+.discard {
+  margin: 1%;
+  width: 20%;
+  height: 30px;
+  background-color: greenyellow;
+  position: relative;
+  animation-name: removeFrame;
+  animation-duration: 1s;
+}
+
+@keyframes addFrame {
+  0% {
+    background-color: yellow;
+    left: 200px;
+  }
+  100% {
+    background-color: green;
+    left: 0px;
+  }
+}
+
+@keyframes removeFrame {
+  0% {
+    background-color: yellow;
+    left: 0px;
+  }
+  100% {
+    background-color: red;
+    left: 200px;
+  }
+}
